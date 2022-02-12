@@ -1,0 +1,66 @@
+.header {
+    background-color: $main-green;
+    height: 100px;
+    &__logo {
+        img {
+            min-width: 86px;
+            min-height: 86px;
+        }
+    }
+    &__name {
+        position: absolute;
+        top: 0;
+        left: 82px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: $white;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 23px;
+        left: 95px;
+        a {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            &:nth-child(1) {
+                color: $red;
+            }
+            &:nth-child(2) {
+                color: $light-green;
+            }
+            &:nth-child(4) {
+                color: $blue;
+            }
+        }
+        hr {
+            margin: 0;
+            margin-top: 5px;
+            border-bottom: none;
+            background-color: $white;
+        }
+    }
+    &__languages {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 90%;
+        a {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: $white;
+        }
+    }
+    a {
+        &:hover {
+            text-decoration: none;        
+        }
+    }
+    
+}

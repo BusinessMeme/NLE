@@ -1,0 +1,10 @@
+@import 'base/variables';
+header {
+    font-family: 'Alegreya';
+}
+.container {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+}
+@import 'blocks/header';
