@@ -2,7 +2,7 @@
 header {
     font-family: 'Alegreya';
 }
-nav {
+nav, .intro {
     font-family: 'Roboto';
 }
 a {
@@ -12,8 +12,9 @@ a {
 }
 .container {
     position: relative;
-    max-width: 950px;
+    width: 1040px;
     margin: 0 auto;
 }
 @import 'blocks/header';
 @import 'blocks/menu';
+@import 'blocks/intro';

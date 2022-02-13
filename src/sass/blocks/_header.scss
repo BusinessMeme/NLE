@@ -50,13 +50,16 @@
         }
     }
     &__languages {
-        margin-left: 49%;
+        margin-left: 54%;
         a {
             margin-right: 10px;
             font-weight: bold;
             font-size: 18px;
             line-height: 24px;
             color: $white;
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
     
