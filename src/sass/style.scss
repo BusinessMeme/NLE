@@ -2,9 +2,18 @@
 header {
     font-family: 'Alegreya';
 }
+nav {
+    font-family: 'Roboto';
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
 .container {
     position: relative;
     max-width: 950px;
     margin: 0 auto;
 }
 @import 'blocks/header';
+@import 'blocks/menu';

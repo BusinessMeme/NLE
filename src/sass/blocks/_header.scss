@@ -1,65 +1,62 @@
 .header {
     background-color: $main-green;
-    height: 100px;
+    min-height: 100px;
+    &__wrapper {
+        padding-top: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
     &__logo {
+        display: block;
+        min-width: 86px;
+        min-height: 86px;
         img {
             min-width: 86px;
             min-height: 86px;
         }
     }
-    &__name {
-        position: absolute;
-        top: 0;
-        left: 82px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-        color: $white;
-    }
     &__contacts {
+        min-width: 322px;
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 23px;
-        left: 95px;
+        &-name {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: start;
+            color: $white;
+        }
         a {
             font-weight: normal;
             font-size: 16px;
             line-height: 22px;
-            &:nth-child(1) {
+            margin-left: 10px;
+            &:nth-child(2) {
                 color: $red;
             }
-            &:nth-child(2) {
+            &:nth-child(3) {
                 color: $light-green;
             }
-            &:nth-child(4) {
+            &:nth-child(5) {
                 color: $blue;
             }
         }
         hr {
             margin: 0;
-            margin-top: 5px;
+            margin-left: 10px;
             border-bottom: none;
             background-color: $white;
         }
     }
     &__languages {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 90%;
+        margin-left: 49%;
         a {
             margin-right: 10px;
             font-weight: bold;
             font-size: 18px;
             line-height: 24px;
             color: $white;
-        }
-    }
-    a {
-        &:hover {
-            text-decoration: none;        
         }
     }
     

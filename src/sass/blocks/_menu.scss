@@ -1,0 +1,19 @@
+.menu {
+    height: 43px;
+    background-color: $dark-green;
+    &__list {
+        margin: 0;
+        padding-top: 8px;
+        display: flex;
+        justify-content: space-around;
+        &-item {
+            list-style: none;
+            a {
+                font-weight: 700;
+                font-size: 18px;
+                text-align: center;
+                color: $white;
+            }
+        }
+    }
+}
