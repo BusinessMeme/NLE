@@ -2,7 +2,7 @@
 header {
     font-family: 'Alegreya';
 }
-nav, .intro {
+nav, .intro, .courses {
     font-family: 'Roboto';
 }
 a {
@@ -11,10 +11,13 @@ a {
     }
 }
 .container {
-    position: relative;
     width: 1040px;
     margin: 0 auto;
 }
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/intro';
+@import 'blocks/title';
+@import 'blocks/subtitle';
+@import 'blocks/courses';
+@import 'blocks/buttons';

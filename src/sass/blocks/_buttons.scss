@@ -1,0 +1,15 @@
+.button {
+    width: 160px;
+    height: 34px;
+    border-style: none;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #EF5C28 0%, rgba(239, 92, 40, 0.38) 0.01%, #EF5C28 100%);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: $white;
+    &:hover {
+        box-shadow: 3px 3px 10px $red;
+    }
+}
