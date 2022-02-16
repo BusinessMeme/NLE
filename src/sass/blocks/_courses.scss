@@ -6,20 +6,69 @@
     &-item {
         position: relative;
         width: 500px;
-        height: 280px;
+        min-height: 280px;
         border-radius: 10px;
         background-color: #fff;
         margin-top: 85px;
         padding: 25px 30px 25px 181px;
+        overflow: hidden;
+        &_active {
+            height: 280px;
+        }
         &__wrapper {
             display: flex;
-            width: calc(200% + 180px);
+            width: calc(200% + 70px);
         }
         &__content {
             width: 50%;
+            transform: translateX(-150%);
+            transition: 0.5s all;            
+            &_active {
+                transform: translateX(0%);
+            }
         }
-        &__detail {
+        &__details {
             width: 50%;
+            transform: translateX(10%);
+            transition: 0.5s all;
+            ul {
+                padding: 0px 30px 0px 0px;
+                list-style: none;
+                li {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 8px;
+                        left: -10px;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 100%;
+                        background-color: $red;
+                    }
+                }
+            }
+            a {
+                display: block;
+                transform: translateX(-85px);
+                color: $light-green;
+            }
+            &_active {
+                transform: translateX(-100%);
+            }
+        }
+        &__schedule {
+            transform: translateX(-85px);
+            .courses-item__subtitle {
+                text-align: center;
+            }
+        }
+        &__price {
+            transform: translateX(-85px);
+            .courses-item__subtitle {
+                text-align: center;
+            }
         }
         &__title {
             margin-bottom: 5px;
@@ -31,8 +80,7 @@
         }
         &__level {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 84px;
             left: 41px;
             width: 100px;
             height: 100px;
