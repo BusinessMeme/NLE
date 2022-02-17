@@ -3,13 +3,19 @@
     .container {
         padding: 50px 0 45px 0;
     }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 85px;
+    }
     &-item {
         position: relative;
         width: 500px;
         min-height: 280px;
         border-radius: 10px;
         background-color: #fff;
-        margin-top: 85px;
+        margin-bottom: 40px;
         padding: 25px 30px 25px 181px;
         overflow: hidden;
         &_active {
@@ -91,6 +97,9 @@
             line-height: 98px;
             text-align: center;
             color: $blue;
+            &_wide {
+                color: $light-green;
+            }
         }
         &__subtitle {
             font-weight: 500;
@@ -98,8 +107,12 @@
             line-height: 18px;
             color: $blue;
             margin-bottom: 5px;
+            &_wide {
+                color: $light-green;
+            }
         }
         &__descr {
+            width: 289px;
             font-weight: 400;
             font-size: 16px;
             line-height: 16px;
