@@ -12,40 +12,36 @@
     &-item {
         position: relative;
         width: 500px;
-        max-height: none;
+        height: 100%;
         border-radius: 10px;
         background-color: #fff;
         margin-bottom: 40px;
-        padding: 25px 30px 25px 181px;
+        padding: 25px 30px 25px 0;
         overflow: hidden;
         &_active {
             max-height: 280px;
         }
-        &__wrapper {
-            display: flex;
-            width: calc(200% + 70px);
-        }
         &__content {
-            width: 50%;
-            transform: translateX(-150%);
+            display: none;
+            // width: 50%;
+            // transform: translateX(-150%);
             transition: 0.5s all;            
             &_active {
-                transform: translateX(0%);
-            }
-            .button {
-                position: absolute;
-                top: 125px;
+                display: block;
             }
         }
         &__details {
-            width: 50%;
-            transform: translateX(10%);
+            display: none;
+            // width: 50%;
+            // transform: translateX(10%);
             transition: 0.5s all;
             ul {
-                padding: 0px 30px 0px 0px;
                 list-style: none;
                 li {
                     position: relative;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $black;
                     &:before {
                         content: '';
                         display: block;
@@ -61,27 +57,39 @@
             }
             a {
                 display: block;
-                transform: translateX(-85px);
                 color: $light-green;
+                width: 316px;
+                margin: 0 auto;
+                margin-top: 20px;
             }
             &_active {
-                transform: translateX(-100%);
+                display: block;
             }
+        }
+        &__opportunity {
+            padding: 0 0 0 181px;
         }
         &__schedule {
-            transform: translateX(-85px);
             .courses-item__subtitle {
+                margin-left: 0;
+                margin-top: 15px;
                 text-align: center;
             }
+            width: 316px;
+            margin: 0 auto;
         }
         &__price {
-            transform: translateX(-85px);
             .courses-item__subtitle {
+                margin-left: 0;
+                margin-top: 15px;
                 text-align: center;
             }
+            width: 316px;
+            margin: 0 auto;
         }
         &__title {
             margin-bottom: 5px;
+            margin-left: 181px;
             font-weight: 500;
             font-size: 24px;
             line-height: 24px;
@@ -111,11 +119,13 @@
             line-height: 18px;
             color: $blue;
             margin-bottom: 5px;
+            margin-left: 181px;
             &_wide {
                 color: $light-green;
             }
         }
         &__descr {
+            margin-left: 181px;
             width: 289px;
             font-weight: 400;
             font-size: 16px;

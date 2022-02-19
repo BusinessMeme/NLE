@@ -1,22 +1,27 @@
 .button {
+    display: block;
     width: 160px;
     height: 34px;
     border-style: none;
     border-radius: 2px;
     // background: linear-gradient(180deg, #EF5C28 0%, rgba(239, 92, 40, 0.38) 0.01%, #EF5C28 100%);
     background-color: $red;
-    margin-top: 47px;
+    margin: 0 auto;
+    margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
     line-height: 23px;
     text-align: center;
     color: $white;
+    &__details {
+        margin-left: 181px;
+        margin-top: 41px;
+    }
     &:hover {
         // box-shadow: 3px 3px 10px $red;
         background-color: #db5626;
     }
     &_transparent {
-        margin: 0 auto;
         margin-top: 40px;
         width: 364px;
         height: 40px;
@@ -27,5 +32,10 @@
         font-size: 24px;
         line-height: 38px;
         color: $red;
-    }
+        &:hover {
+            border: none;
+            background-color: #db5626;
+            color: $white;
+        }
+    }    
 }
