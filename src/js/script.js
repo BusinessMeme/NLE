@@ -20,7 +20,7 @@ document.addEventListener('click', function(event) {
     let target = event.target;
     if (target.tagName != 'BUTTON') return;
 
-    if (target.className != 'button button_transparent') {
+    if (target.className != 'button button_transparent' && target.className != 'button button_work') {
         let coursesItem = target.parentNode.parentNode;
         let coursesDetails = coursesItem.querySelector('.courses-item__details');
         let coursesContent = coursesItem.querySelector('.courses-item__content');

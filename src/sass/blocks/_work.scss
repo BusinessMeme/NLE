@@ -1,0 +1,23 @@
+.work {
+    background-color: $grey;
+    .container {
+        padding: 50px 30px 45px 47px;
+    }
+    &__wrapper {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__descr {
+        max-width: 526px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black;
+    }
+    .button {
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}
