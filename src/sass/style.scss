@@ -2,7 +2,7 @@
 header {
     font-family: 'Alegreya';
 }
-nav, .intro, .courses {
+nav, .intro, .courses, .advantages {
     font-family: 'Roboto';
 }
 a {
@@ -21,3 +21,4 @@ a {
 @import 'blocks/subtitle';
 @import 'blocks/courses';
 @import 'blocks/buttons';
+@import 'blocks/advantages';
