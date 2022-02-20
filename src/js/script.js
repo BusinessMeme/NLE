@@ -18,13 +18,24 @@
 
 document.addEventListener('click', function(event) {
     let target = event.target;
-    if(target.tagName != 'BUTTON') return;
-    let coursesItem = target.parentNode.parentNode;
-    let coursesDetails = coursesItem.querySelector('.courses-item__details');
-    let coursesContent = coursesItem.querySelector('.courses-item__content');
-    coursesItem.classList.toggle("courses-item_active");
-    coursesDetails.classList.toggle("courses-item__details_active");
-    coursesContent.classList.toggle("courses-item__content_active");
+    if (target.tagName != 'BUTTON') return;
+
+    if (target.className != 'button button_transparent') {
+        let coursesItem = target.parentNode.parentNode;
+        let coursesDetails = coursesItem.querySelector('.courses-item__details');
+        let coursesContent = coursesItem.querySelector('.courses-item__content');
+
+        coursesItem.classList.toggle("courses-item_active");
+        coursesDetails.classList.toggle("courses-item__details_active");
+        coursesContent.classList.toggle("courses-item__content_active");
+    }
+    else if(target.className == 'button button_transparent') {
+        let coursesMain = target.parentNode;
+        let coursesMore = coursesMain.querySelector('.courses__more');
+
+        coursesMore.classList.toggle("courses__more_active");
+    }
+    
 })
 
 

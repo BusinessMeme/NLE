@@ -9,31 +9,37 @@
         flex-wrap: wrap;
         margin-top: 85px;
     }
+    &__more {
+        display: none;
+        &_active {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
     &-item {
         position: relative;
         width: 500px;
-        height: 100%;
+        // height: 100%;
         border-radius: 10px;
         background-color: #fff;
         margin-bottom: 40px;
         padding: 25px 30px 25px 0;
-        overflow: hidden;
         &_active {
             max-height: 280px;
         }
         &__content {
-            display: none;
-            // width: 50%;
-            // transform: translateX(-150%);
+            display: none;   
             transition: 0.5s all;            
             &_active {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 197px;
             }
         }
         &__details {
             display: none;
-            // width: 50%;
-            // transform: translateX(10%);
             transition: 0.5s all;
             ul {
                 list-style: none;
@@ -63,7 +69,10 @@
                 margin-top: 20px;
             }
             &_active {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 651px;
             }
         }
         &__opportunity {
@@ -72,7 +81,7 @@
         &__schedule {
             .courses-item__subtitle {
                 margin-left: 0;
-                margin-top: 15px;
+                // margin-top: 15px;
                 text-align: center;
             }
             width: 316px;
@@ -81,20 +90,11 @@
         &__price {
             .courses-item__subtitle {
                 margin-left: 0;
-                margin-top: 15px;
+                // margin-top: 15px;
                 text-align: center;
             }
             width: 316px;
             margin: 0 auto;
-        }
-        &__title {
-            margin-bottom: 5px;
-            margin-left: 181px;
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 24px;
-            text-align: left;
-            color: $black;
         }
         &__level {
             position: absolute;
@@ -113,12 +113,19 @@
                 color: $light-green;
             }
         }
+        &__title {
+            margin-bottom: 5px;
+            margin-left: 181px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: left;
+            color: $black;
+        }
         &__subtitle {
             font-weight: 500;
-            font-size: 19px;
-            line-height: 18px;
+            font-size: 19px;            
             color: $blue;
-            margin-bottom: 5px;
             margin-left: 181px;
             &_wide {
                 color: $light-green;

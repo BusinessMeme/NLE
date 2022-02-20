@@ -6,7 +6,7 @@
     border-radius: 2px;
     // background: linear-gradient(180deg, #EF5C28 0%, rgba(239, 92, 40, 0.38) 0.01%, #EF5C28 100%);
     background-color: $red;
-    margin: 0 auto;
+    margin-left: 170px;
     margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
@@ -15,13 +15,13 @@
     color: $white;
     &__details {
         margin-left: 181px;
-        margin-top: 41px;
     }
     &:hover {
         // box-shadow: 3px 3px 10px $red;
         background-color: #db5626;
     }
     &_transparent {
+        margin: 0 auto;
         margin-top: 40px;
         width: 364px;
         height: 40px;
