@@ -1,0 +1,46 @@
+.feedback {
+    .container {
+        padding: 50px 30px 45px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        margin-top: 70px;
+    }
+    &__img {
+        margin-right: 20px;
+        width: 169px;
+        height: 169px;
+        border-radius: 100%;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 21px;
+        color: $black;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+        overflow: hidden;
+        &_more {
+            max-height: 114px;
+        }
+    }    
+    .button {
+        margin-top: 70px;
+    }
+    .button_more {
+        border: none;
+        background: none;
+        font-weight: 700;
+        font-size: 16px;
+        color: $red;
+        text-align: center;
+    }
+}

@@ -18,9 +18,9 @@
 
 document.addEventListener('click', function(event) {
     let target = event.target;
-    if (target.tagName != 'BUTTON') return;
+    if (target.tagName != 'BUTTON' && target.tagName != 'A') return;
 
-    if (target.className != 'button button_transparent' && target.className != 'button button_work') {
+    if (target.className == 'button button_collapse' || target.className == 'button button_details') {
         let coursesItem = target.parentNode.parentNode;
         let coursesDetails = coursesItem.querySelector('.courses-item__details');
         let coursesContent = coursesItem.querySelector('.courses-item__content');
@@ -29,16 +29,44 @@ document.addEventListener('click', function(event) {
         coursesDetails.classList.toggle("courses-item__details_active");
         coursesContent.classList.toggle("courses-item__content_active");
     }
-    else if(target.className == 'button button_transparent') {
+    else if (target.className == 'button button_transparent') {
         let coursesMain = target.parentNode;
         let coursesMore = coursesMain.querySelector('.courses__more');
 
         coursesMore.classList.toggle("courses__more_active");
     }
-    
-})
+    else if (target.className == 'button button_feed') {
+        window.open('https://goo.gl/maps/sr42PRHVRfT4iuDR8','_blank');       
+    }
 
+    if (target.className == 'button_more') {
+        event.preventDefault();
+        let btnParent = target.parentNode;
+        let feedbackDescr = btnParent.querySelector('.feedback__descr');
 
+        feedbackDescr.classList.toggle("feedback__descr_more");
 
+        if (target.innerHTML == "Свернуть") {
+            target.innerHTML = "Развернуть";
+        } else {
+            target.innerHTML = "Свернуть";
+        }
+        
+    }    
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+    let descr = document.querySelectorAll('.feedback__descr');
 
+    for (let i = 0; i < descr.length; i++) {
+        if (descr[i].offsetHeight != 114) {
+            let btnExpand = document.createElement('a');
+            btnExpand.href = '#';
+            btnExpand.innerHTML = 'развернуть';
+            btnExpand.classList.add("button_more");
+            descr[i].after(btnExpand);
+            descr[i].classList.add("feedback__descr_more");
+            
+        }
+    }  
+});
