@@ -41,8 +41,7 @@ document.addEventListener('click', function(event) {
 
     if (target.className == 'button_more') {
         event.preventDefault();
-        let btnParent = target.parentNode;
-        let feedbackDescr = btnParent.querySelector('.feedback__descr');
+        let feedbackDescr = target.parentNode.querySelector('.feedback__descr');
 
         feedbackDescr.classList.toggle("feedback__descr_more");
 
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let descr = document.querySelectorAll('.feedback__descr');
 
     for (let i = 0; i < descr.length; i++) {
-        if (descr[i].offsetHeight != 114) {
+        if (descr[i].offsetHeight > 136) {
             let btnExpand = document.createElement('a');
             btnExpand.href = '#';
             btnExpand.innerHTML = 'развернуть';

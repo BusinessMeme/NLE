@@ -1,9 +1,10 @@
 @import 'base/variables';
-header {
-    font-family: 'Alegreya';
-}
+
 nav, .intro, .courses, .advantages, .work, .feedback, .footer {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+}
+header, .courses-item__level {
+    font-family: 'Alegreya', serif;
 }
 a {
     &:hover {
