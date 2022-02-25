@@ -18,7 +18,11 @@
 
 document.addEventListener('click', function(event) {
     let target = event.target;
-    if (target.tagName != 'BUTTON' && target.tagName != 'A') return;
+    let targetClosest = target.closest('a');
+    if (target.tagName != 'BUTTON' && targetClosest.tagName != 'A') {
+        console.log(targetClosest);
+        return;
+    }
 
     if (target.className == 'button button_collapse' || target.className == 'button button_details') {
         let coursesItem = target.parentNode.parentNode;
@@ -34,6 +38,12 @@ document.addEventListener('click', function(event) {
         let coursesMore = coursesMain.querySelector('.courses__more');
 
         coursesMore.classList.toggle("courses__more_active");
+
+        if (target.innerHTML == "ПОКАЗАТЬ ЕЩЕ 5 КУРСОВ") {
+            target.innerHTML = "СВЕРНУТЬ";
+        } else {
+            target.innerHTML = "ПОКАЗАТЬ ЕЩЕ 5 КУРСОВ";
+        }
     }
     else if (target.className == 'button button_feed') {
         window.open('https://goo.gl/maps/sr42PRHVRfT4iuDR8','_blank');       
@@ -51,7 +61,19 @@ document.addEventListener('click', function(event) {
             target.innerHTML = "Свернуть";
         }
         
-    }    
+    }  
+    
+    if (targetClosest.className == 'pageup') {
+        event.preventDefault();
+
+        const href = targetClosest.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+
+        scroll({
+        top: offsetTop,
+        behavior: "smooth"
+        });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,3 +91,68 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }  
 });
+
+
+
+document.addEventListener('scroll', function() {
+    elSwitcher();
+});
+
+//animation switch
+function ElSwitch (elem) {   
+    this.elem = elem;
+    this.isVisible = false;
+}
+
+let menuSwitch = new ElSwitch(document.querySelector('.promo').querySelector('.menu'));
+let pageupSwitch = new ElSwitch(document.querySelector('.pageup'));
+
+function elSwitcher () {    
+    if (window.scrollY > 100 && !menuSwitch.isVisible) {
+        menuSwitch.isVisible = true;
+        menuSwitch.elem.classList.add("menu_active");
+    }
+    else if (window.scrollY <= 100 && menuSwitch.isVisible){
+        menuSwitch.isVisible = false;
+        menuSwitch.elem.classList.remove("menu_active");
+    }
+    if (window.scrollY > 1000 && !pageupSwitch.isVisible) {
+        pageupSwitch.isVisible = true;
+        fadeIn(pageupSwitch.elem);
+    } else if (window.scrollY < 1000 && pageupSwitch.isVisible){
+        pageupSwitch.isVisible = false;
+        fadeOut(pageupSwitch.elem);
+    }
+}
+
+// pageup animations
+function fadeIn (el) {
+    let opacity = 0.01;
+
+    el.style.display = "block";
+
+    let timer = setInterval(function() {
+        el.style.opacity = opacity;
+        opacity += opacity * 0.1;
+
+        if (opacity >= 1) {
+            clearInterval(timer);
+        }        
+    }, 10);
+}
+
+function fadeOut (el) {
+    let opacity = 1;
+
+    let timer = setInterval(function() {
+
+        el.style.opacity = opacity;
+        opacity -= opacity * 0.1;
+        
+        if (opacity <= 0.1) {
+            clearInterval(timer);
+            el.style.display = "none";
+            el.style.opacity = 0;
+        }
+    }, 10);
+}

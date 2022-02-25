@@ -1,4 +1,7 @@
 .menu {
+    position: absolute;
+    top: 100px;
+    width: 100%;
     height: 43px;
     background-color: $dark-green;
     &__list {
@@ -15,5 +18,10 @@
                 color: $white;
             }
         }
+    }
+    &_active {
+        position: fixed;
+        top: 0;
+        z-index: 1;
     }
 }
