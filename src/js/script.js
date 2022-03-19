@@ -52,6 +52,8 @@ document.addEventListener('click', function(event) {
     if (target.tagName == 'A') {
         event.preventDefault();
         smoothScroll(target);
+        humburger.classList.toggle("humburger_active");
+        mobileMenu.classList.toggle("menu__list_opened");
     }
 });
 

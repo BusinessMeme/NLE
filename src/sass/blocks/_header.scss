@@ -88,5 +88,8 @@
         @media (max-width: $firstBreakpoint) {
             display: none;
         }
+        @media (max-width: $secondBreakpoint) {
+            margin-left: 36%;
+        }
     }
 }

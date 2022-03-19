@@ -14,7 +14,7 @@
     &_details {
         margin-top: 20px;
         margin-left: 181px;
-        @media (max-width: $firstBreakpoint) {
+        @media (max-width: $secondBreakpoint) {
             margin: 0 auto;
             margin-top: 15px;
         }
@@ -22,7 +22,7 @@
     &_collapse {
         margin-top: 20px;
         margin-left: 170px;
-        @media(max-width: $firstBreakpoint) {
+        @media(max-width: $secondBreakpoint) {
             margin: 0 auto;
         }
     }

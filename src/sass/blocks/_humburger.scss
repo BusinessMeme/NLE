@@ -1,6 +1,6 @@
 .humburger {
     display: none;
-    @media (max-width: $firstBreakpoint) {
+    @media (max-width: $secondBreakpoint) {
         display: block;
         position: absolute;
         right: 15px;

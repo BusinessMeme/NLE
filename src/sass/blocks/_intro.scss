@@ -21,13 +21,17 @@
             text-align: center;
             color: $red;
             text-shadow: 1px 1px 1px #1C4746;
-            @media (max-width: $firstBreakpoint) {
+            @media (max-width: $secondBreakpoint) {
                 font-size: 26px;
             }
         }
         &-name {
             margin-top: 35px;
             max-width: 479px;
+            @media (max-width: $secondBreakpoint) {
+                margin-top: 30px;
+                max-width: 400px;
+            }
             @media (max-width: $firstBreakpoint) {
                 margin-top: 25px;
                 max-width: 300px;
@@ -39,7 +43,7 @@
             font-size: 32px;
             line-height: 37px;
             color: $blue;
-            @media (max-width: $firstBreakpoint) {
+            @media (max-width: $secondBreakpoint) {
                 margin-top: 25px;
                 font-size: 25px;
                 text-align: center;
@@ -51,7 +55,7 @@
             font-size: 24px;
             line-height: 28px;
             color: $white;
-            @media(max-width: $firstBreakpoint) {
+            @media(max-width: $secondBreakpoint) {
                 margin-top: 15px;
                 font-size: 18px;
                 line-height: 22px;
