@@ -4,7 +4,6 @@
     height: 34px;
     border-style: none;
     border-radius: 2px;
-    // background: linear-gradient(180deg, #EF5C28 0%, rgba(239, 92, 40, 0.38) 0.01%, #EF5C28 100%);
     background-color: $red;
     margin: 0 auto;
     font-weight: 500;
@@ -15,15 +14,21 @@
     &_details {
         margin-top: 20px;
         margin-left: 181px;
+        @media (max-width: $firstBreakpoint) {
+            margin: 0 auto;
+            margin-top: 15px;
+        }
     }
     &_collapse {
         margin-top: 20px;
         margin-left: 170px;
+        @media(max-width: $firstBreakpoint) {
+            margin: 0 auto;
+        }
     }
-    &:hover {
-        // box-shadow: 3px 3px 10px $red;
+    /* &:hover {
         background-color: #db5626;
-    }
+    } */
     &_transparent {
         margin: 0 auto;
         margin-top: 40px;
@@ -33,13 +38,19 @@
         border-style: solid;
         border-color: $red;
         background: $grey;
+        // background-image: linear-gradient(to top, $red 0%, #4ce2ff 100%);
+        // transform: skewY(5deg);
         font-size: 24px;
         line-height: 38px;
         color: $red;
-        &:hover {
+        /* &:hover {
             border: none;
             background-color: #db5626;
             color: $white;
+        } */
+        @media (max-width: $firstBreakpoint) {
+            width: 270px;
+            font-size: 18px;
         }
     }    
 }

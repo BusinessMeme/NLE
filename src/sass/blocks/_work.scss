@@ -16,6 +16,11 @@
         line-height: 21px;
         color: $black;
     }
+    &__img {
+        @media (max-width: $firstBreakpoint) {
+            display: none;
+        }
+    }
     .button {
         margin: 0 auto;
         margin-top: 60px;

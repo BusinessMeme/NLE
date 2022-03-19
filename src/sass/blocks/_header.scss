@@ -1,25 +1,43 @@
 .header {
     background-color: $main-green;
-    min-height: 100px;
+    height: 100px;
+    @media (max-width: $firstBreakpoint) {
+        height: 66px;
+    }    
     &__wrapper {
         padding-top: 5px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        @media(max-width: $firstBreakpoint) {
+            justify-content: center;
+        }
     }
     &__logo {
         display: block;
-        min-width: 86px;
-        min-height: 86px;
+        max-width: 86px;
+        max-height: 86px;
         img {
-            min-width: 86px;
-            min-height: 86px;
+            max-width: 86px;
+            max-height: 86px;
+        }
+        @media (max-width: $firstBreakpoint) {
+            margin-right: 10px;
+            max-width: 50px;
+            max-height: 50px;
+            img {
+                max-width: 50px;
+                max-height: 50px;
+            }   
         }
     }
     &__contacts {
         min-width: 322px;
         display: flex;
         flex-direction: column;
+        @media(max-width: $firstBreakpoint) {
+            min-width: 155px;
+        }
         &-name {
             font-weight: 400;
             font-size: 18px;
@@ -41,12 +59,18 @@
             &:nth-child(5) {
                 color: $blue;
             }
+            @media (max-width: $firstBreakpoint) {
+                display: none;
+            }
         }
         hr {
             margin: 0;
             margin-left: 10px;
             border-bottom: none;
             background-color: $white;
+            @media (max-width: $firstBreakpoint) {
+                display: none;
+            }
         }
     }
     &__languages {
@@ -61,6 +85,8 @@
                 margin-right: 0;
             }
         }
+        @media (max-width: $firstBreakpoint) {
+            display: none;
+        }
     }
-    
 }

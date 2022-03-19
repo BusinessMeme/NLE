@@ -1,0 +1,33 @@
+.humburger {
+    display: none;
+    @media (max-width: $firstBreakpoint) {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 17px;
+        width: 26px;
+        height: 12px;
+        span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: $white;
+            margin-bottom: 2px;
+            transition: 0.5s all;
+        }
+        &_active {
+            span {
+                margin-bottom: -2px;
+                &:nth-child(1) {
+                    transform: translateY(3px) rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    display: none;                    
+                }
+                &:nth-child(3) {
+                    transform: translateY(3px) rotate(45deg);                    
+                }
+            }
+        }
+    }
+}

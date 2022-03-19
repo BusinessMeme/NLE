@@ -9,4 +9,10 @@
     line-height: 57px;
     text-align: center;
     color: $white;
+    @media (max-width: $firstBreakpoint) {
+        width: 200px;
+        height: 45px;
+        font-size: 20px;
+        line-height: 48px;
+    }
 }

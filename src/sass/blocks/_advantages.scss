@@ -1,6 +1,9 @@
 .advantages {
     .container {
         padding: 50px 30px 45px 50px;
+        @media(max-width: $firstBreakpoint) {
+            padding-left: 30px;
+        }
     }
     &__content {
         margin-top: 85px;
@@ -15,12 +18,24 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $firstBreakpoint) {
+            height: 590px;
+        }
     }
     &__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 126px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black;
+        list-style: none;
+        @media (max-width: $firstBreakpoint) {
+            font-size: 14px;
+            line-height: 16px;
+        }
         &-img {
             min-width: 120px;
             min-height: 120px;
@@ -31,18 +46,23 @@
             margin-right: 26px;
             border-radius: 10px;
             background-color: $main-green;
+            @media  (max-width: $firstBreakpoint) {
+                min-width: 100px;
+                min-height: 100px;
+            }
             img {
                 display: block;
+                @media  (max-width: $firstBreakpoint) {
+                    width: 85px;
+                }
             }
         }
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 21px;
-        color: $black;
-        list-style: none;
     }
     &__img {
         width: 472px;
         height: 321px;
+        @media  (max-width: $firstBreakpoint) {
+            display: none;
+        }
     }
 }

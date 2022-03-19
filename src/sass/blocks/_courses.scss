@@ -2,12 +2,21 @@
     background-color: $grey;
     .container {
         padding: 50px 0 45px 0;
+        @media (max-width: $firstBreakpoint) {
+            padding: 35px 0 35px 0;
+        }
     }
     &__content {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 85px;
+        @media (max-width: $firstBreakpoint) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
     }
     &__more {
         display: none;
@@ -15,6 +24,11 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            @media (max-width: $firstBreakpoint) {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
     &-item {
@@ -25,8 +39,15 @@
         background-color: #fff;
         margin-bottom: 40px;
         padding: 25px 30px 25px 0;
+        @media (max-width: $firstBreakpoint) {
+            width: 300px;
+            padding: 15px 0 15px 0;
+        }
         &_active {
             max-height: 280px;
+            @media (max-width: $firstBreakpoint) {
+                max-height: none;
+            }
         }
         &__content {
             display: none;               
@@ -42,6 +63,7 @@
             transition: 0.5s all;
             ul {
                 list-style: none;
+                padding-left: 15px;
                 li {
                     position: relative;
                     font-weight: 400;
@@ -69,6 +91,10 @@
                 font-weight: normal;
                 font-size: 16px;
                 text-align: center;
+                @media(max-width: $firstBreakpoint) {
+                    width: 300px;
+                    
+                }
             }
             &_active {
                 display: flex;
@@ -79,15 +105,21 @@
         }
         &__opportunity {
             padding: 0 0 0 181px;
+            @media (max-width: $firstBreakpoint) {
+                padding-left: 40px;
+                margin: 0 auto;
+            }
         }
         &__schedule {
             .courses-item__subtitle {
                 margin-left: 0;
-                // margin-top: 15px;
                 text-align: center;
             }
             width: 316px;
             margin: 0 auto;
+            @media (max-width: $firstBreakpoint) {
+                width: 295px;
+            }
         }
         &__price {
             .courses-item__subtitle {
@@ -97,6 +129,9 @@
             }
             width: 316px;
             margin: 0 auto;
+            @media (max-width: $firstBreakpoint) {
+                width: 295px;
+            }
         }
         &__level {
             position: absolute;
@@ -114,6 +149,15 @@
             &_wide {
                 color: $light-green;
             }
+            @media (max-width: $firstBreakpoint) {
+                left: 25px;
+                top: 15px;
+                width: 70px;
+                height: 70px;
+                font-size: 49px;
+                line-height: 69px;
+
+            }
         }
         &__title {
             margin-bottom: 5px;
@@ -123,6 +167,10 @@
             line-height: 24px;
             text-align: left;
             color: $black;
+            @media (max-width: $firstBreakpoint) {
+                margin-left: 120px;
+                margin-bottom: 0;
+            }
         }
         &__subtitle {
             font-weight: 500;
@@ -132,14 +180,22 @@
             &_wide {
                 color: $light-green;
             }
+            @media (max-width: $firstBreakpoint) {
+                margin-left: 120px;
+                line-height: 18px;
+            }
         }
         &__descr {
             margin-left: 181px;
-            width: 289px;
+            width: 290px;
             font-weight: 400;
             font-size: 14px;
             line-height: 16px;
             color: $black;
+            @media (max-width: $firstBreakpoint) {
+                margin: 0 auto;
+                text-align: justify;
+            }
         }
     }
 }

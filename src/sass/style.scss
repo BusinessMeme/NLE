@@ -12,11 +12,12 @@ a {
     }
 }
 .container {
-    width: 1040px;
+    max-width: 1040px;
     margin: 0 auto;
 }
 @import 'blocks/header';
 @import 'blocks/menu';
+@import 'blocks/humburger';
 @import 'blocks/intro';
 @import 'blocks/title';
 @import 'blocks/subtitle';
