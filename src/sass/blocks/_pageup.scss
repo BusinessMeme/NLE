@@ -9,4 +9,7 @@
     img {
         width: 100%;
     }
+    @media (max-width: $secondBreakpoint) {
+        display: none;
+    }
 }
